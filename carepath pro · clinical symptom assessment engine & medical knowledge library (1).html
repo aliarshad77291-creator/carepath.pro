@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>CarePath Pro · Clinical Symptom Assessment Engine &amp; Medical Knowledge Library</title>
+  <meta name="description" content="CarePath Pro is an evidence-based clinical symptom assessment engine, interactive anatomical body explorer, and comprehensive medical knowledge library.">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CarePath Pro · Clinical Symptom Assessment Engine &amp; Medical Knowledge Library_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CarePath Pro · Clinical Symptom Assessment Engine &amp; Medical Knowledge Library_files/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 24 24&#39; fill=&#39;%230f766e&#39;&gt;&lt;path d=&#39;M19 14V10H14V5H10V10H5V14H10V19H14V14H19Z&#39;/&gt;&lt;/svg&gt;">
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="http://localhost:8080/#" class="brand-container active" data-nav="home">
+        <div class="brand-logo-badge">⚕</div>
+        <div class="brand-text-block">
+          <span class="brand-name">
+            CarePath <span class="brand-pro-tag">PRO</span>
+          </span>
+          <span class="brand-tagline">Clinical Triage &amp; Medical Library</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation">
+        <a href="http://localhost:8080/#" class="nav-link active" data-nav="home">Home &amp; Body Explorer</a>
+        <a href="http://localhost:8080/#" class="nav-link" data-nav="assessment">Clinical Assessment</a>
+        <a href="http://localhost:8080/#" class="nav-link" data-nav="library">Condition Library</a>
+        <a href="http://localhost:8080/#" class="nav-link" data-nav="compare">Differential Matrix</a>
+        <a href="http://localhost:8080/#" class="nav-link" data-nav="emergency">Emergency Hotlines</a>
+        <a href="http://localhost:8080/#" class="nav-link nav-btn-highlight" data-nav="assessment">Start Check-in</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button type="button" id="btnThemeToggle" class="btn-icon" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          🌙
+        </button>
+        <button type="button" id="btnToggleMobileNav" class="btn-icon mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+      <a href="http://localhost:8080/#" class="nav-link active" data-nav="home">🏠 Home &amp; Body Explorer</a>
+      <a href="http://localhost:8080/#" class="nav-link" data-nav="assessment">🩺 Clinical Assessment Wizard</a>
+      <a href="http://localhost:8080/#" class="nav-link" data-nav="library">📚 Medical Condition Library</a>
+      <a href="http://localhost:8080/#" class="nav-link" data-nav="compare">⚖️ Differential Comparison Matrix</a>
+      <a href="http://localhost:8080/#" class="nav-link" data-nav="emergency">🚨 Emergency Directory &amp; Protocols</a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- VIEW 1: HOME & BODY EXPLORER -->
+    <section id="view-home" class="page-view" style="display: block;">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-left">
+          <div class="hero-badge-row">
+            <span>🛡️ Clinically Grounded Medical Triage</span>
+            <span>·</span>
+            <span>40+ Conditions Indexed</span>
+          </div>
+
+          <h1 class="hero-title">
+            Make sense of your symptoms with <span class="highlight">clinical precision</span>.
+          </h1>
+
+          <p class="hero-desc">
+            CarePath Pro is an advanced symptom assessment engine and evidence-based pathology compendium. Identify potential patterns, prepare tailored questions for your physician, and receive instant triage guidance.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" id="btnHeroStartAssessment" class="btn-cta-primary">
+              <span>🩺 Start Symptom Check-in</span>
+            </button>
+            <button type="button" id="btnHeroExploreLibrary" class="btn-cta-secondary">
+              <span>📚 Browse 40+ Conditions</span>
+            </button>
+            <button type="button" id="btnHeroCompare" class="btn-cta-secondary">
+              <span>⚖️ Differential Matrix</span>
+            </button>
+          </div>
+
+          <div class="hero-trust-indicators">
+            <div class="trust-item">
+              <span class="trust-icon">✓</span>
+              <span>ICD-10 Referenced</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">✓</span>
+              <span>WHO &amp; CDC Grounded</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">✓</span>
+              <span>Printable Doctor Summary</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Quick Triage Teaser -->
+        <div class="hero-triage-card">
+          <div class="hero-triage-header">
+            <span class="section-eyebrow">INTELLIGENT TRIAGE</span>
+            <h3>4-Tier Clinical Urgency Classification</h3>
+            <p>CarePath Pro triages answers against emergency red flags, pain scores, and acute progression vectors.</p>
+          </div>
+
+          <div class="triage-tier-preview">
+            <div class="tier-preview-row tier-emergency">
+              <span>🚨 Level 1: Emergency</span>
+              <span>Immediate ER / 911</span>
+            </div>
+            <div class="tier-preview-row tier-urgent">
+              <span>⚠️ Level 2: Urgent Care</span>
+              <span>Same-Day / 24h Care</span>
+            </div>
+            <div class="tier-preview-row tier-routine">
+              <span>📋 Level 3: Primary Care</span>
+              <span>Routine Consultation</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-action-primary" style="width: 100%; justify-content: center;" data-nav="assessment">
+            Check Your Symptoms Now →
+          </button>
+        </div>
+      </div>
+
+      <!-- Anatomical Body Explorer Section -->
+      <div class="section-wrapper">
+        <div class="section-head-center">
+          <span class="section-eyebrow">INTERACTIVE ANATOMY</span>
+          <h2 class="section-headline">Explore Symptoms by Anatomical Region</h2>
+          <p class="section-subtext">Click on any anatomical zone on the interactive mannequin to discover localized symptoms, hallmark conditions, and rapid diagnostic insights.</p>
+        </div>
+
+        <div id="bodyMapContainer">
+      <div class="body-explorer-wrapper">
+        <div class="body-view-controls">
+          <button type="button" class="btn-toggle-view active" data-view="front">
+            <span>Front View</span>
+          </button>
+          <button type="button" class="btn-toggle-view " data-view="back">
+            <span>Back View</span>
+          </button>
+        </div>
+
+        <div class="body-interactive-stage">
+          <!-- Anatomical SVG Diagram -->
+          <div class="svg-mannequin-container">
+            <svg viewBox="0 0 300 520" class="mannequin-svg" aria-label="Interactive Human Body Anatomy">
+              <defs>
+                <lineargradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"></stop>
+                  <stop offset="100%" stop-color="#0f766e" stop-opacity="0.35"></stop>
+                </lineargradient>
+                <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                  <fegaussianblur stdDeviation="3" result="blur"></fegaussianblur>
+                  <fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+                </filter>
+              </defs>
+
+              <!-- Base Body Silhouette -->
+              <!-- Head -->
+              <path class="anatomical-zone selected" data-region="head" d="M150,25 C132,25 120,40 120,62 C120,84 133,100 150,100 C167,100 180,84 180,62 C180,40 168,25 150,25 Z"></path>
+              <circle cx="150" cy="62" r="5" class="zone-pin active" data-region="head"></circle>
+              <text x="150" y="45" class="zone-label" text-anchor="middle">Head</text>
+
+              <!-- Neck & Throat -->
+              <path class="anatomical-zone " data-region="throat" d="M140,100 L160,100 L163,118 L137,118 Z"></path>
+              <circle cx="150" cy="110" r="4" class="zone-pin " data-region="throat"></circle>
+
+              <!-- Chest & Respiratory -->
+              <path class="anatomical-zone " data-region="chest" d="M115,120 L185,120 L195,190 L105,190 Z"></path>
+              <circle cx="150" cy="155" r="6" class="zone-pin " data-region="chest"></circle>
+              <text x="150" y="160" class="zone-label" text-anchor="middle">Chest / Lungs</text>
+
+              <!-- Arms / Upper Limbs -->
+              <path class="anatomical-zone " data-region="limbs" d="M102,122 L80,185 L72,255 L82,255 L96,192 L106,140 Z M198,122 L220,185 L228,255 L218,255 L204,192 L194,140 Z"></path>
+              <circle cx="78" cy="200" r="5" class="zone-pin " data-region="limbs"></circle>
+              <circle cx="222" cy="200" r="5" class="zone-pin " data-region="limbs"></circle>
+
+              <!-- Abdomen & Digestive -->
+              <path class="anatomical-zone " data-region="abdomen" d="M110,192 L190,192 L185,260 L115,260 Z"></path>
+              <circle cx="150" cy="225" r="6" class="zone-pin " data-region="abdomen"></circle>
+              <text x="150" y="230" class="zone-label" text-anchor="middle">Abdomen</text>
+
+              <!-- Spine (shown highlighted on back view or central band) -->
+              <path class="anatomical-zone " data-region="spine" d="M142,122 L158,122 L156,280 L144,280 Z" opacity="0.7"></path>
+              <circle cx="150" cy="268" r="4" class="zone-pin " data-region="spine"></circle>
+
+              <!-- Pelvis & Bladder -->
+              <path class="anatomical-zone " data-region="pelvis" d="M116,262 L184,262 L172,305 L128,305 Z"></path>
+              <circle cx="150" cy="285" r="5" class="zone-pin " data-region="pelvis"></circle>
+              <text x="150" y="290" class="zone-label" text-anchor="middle">Pelvis</text>
+
+              <!-- Legs & Lower Limbs -->
+              <path class="anatomical-zone " data-region="limbs" d="M125,308 L148,308 L145,410 L140,490 L125,490 L118,410 L116,350 Z M152,308 L175,308 L182,350 L180,410 L175,490 L160,490 L155,410 Z"></path>
+              <circle cx="132" cy="420" r="5" class="zone-pin " data-region="limbs"></circle>
+              <circle cx="168" cy="420" r="5" class="zone-pin " data-region="limbs"></circle>
+              <text x="150" y="450" class="zone-label" text-anchor="middle">Legs / Joints</text>
+            </svg>
+          </div>
+
+          <!-- Region Quick Details Sidebar -->
+          <div class="body-region-sidebar" id="bodyRegionDetail">
+            
+      <div class="region-detail-card">
+        <div class="detail-header">
+          <span class="detail-tag">ANATOMICAL ZONE</span>
+          <h3 class="detail-title">Head &amp; Brain</h3>
+          <p class="detail-desc">Headaches, vision, facial weakness, dizziness, speech</p>
+        </div>
+
+        <div class="detail-section">
+          <h4>Common Symptoms to Notice (7):</h4>
+          <div class="symptom-mini-list">
+            
+              <div class="symptom-mini-badge ">
+                 Throbbing or pulsating head pain (one-sided)
+              </div>
+            
+              <div class="symptom-mini-badge ">
+                 Dull band of tight pressure around head
+              </div>
+            
+              <div class="symptom-mini-badge red-flag">
+                <span class="rf-icon">⚠️</span> Explosive, sudden 'worst headache of life'
+              </div>
+            
+              <div class="symptom-mini-badge red-flag">
+                <span class="rf-icon">⚠️</span> Sudden facial droop, mouth drooping, or asymmetric smile
+              </div>
+            
+              <div class="symptom-mini-badge red-flag">
+                <span class="rf-icon">⚠️</span> Sudden trouble speaking, slurred words, or inability to comprehend
+              </div>
+            
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h4>Clinical Conditions in this Region (8):</h4>
+          <div class="disease-mini-pills">
+            
+              <button type="button" class="disease-pill-btn" data-disease="stroke-tia">
+                Stroke &amp; Transient Ischemic Attack (TIA) <span class="arr">→</span>
+              </button>
+            
+              <button type="button" class="disease-pill-btn" data-disease="migraine">
+                Migraine Headache <span class="arr">→</span>
+              </button>
+            
+              <button type="button" class="disease-pill-btn" data-disease="tension-headache">
+                Tension-Type Headache <span class="arr">→</span>
+              </button>
+            
+              <button type="button" class="disease-pill-btn" data-disease="bells-palsy">
+                Bell's Palsy <span class="arr">→</span>
+              </button>
+            
+          </div>
+        </div>
+
+        <button type="button" class="btn-start-region-assessment" data-region="head">
+          <span>Assess symptoms in Head &amp; Brain</span>
+        </button>
+      </div>
+    
+          </div>
+        </div>
+
+        <!-- Quick Region Selector Chips -->
+        <div class="region-chips-grid">
+          
+            <button type="button" class="region-chip active" data-region="head">
+              <span class="chip-name">Head &amp; Brain</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="throat">
+              <span class="chip-name">Eyes, Ears &amp; Throat</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="chest">
+              <span class="chip-name">Chest &amp; Lungs</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="abdomen">
+              <span class="chip-name">Abdomen &amp; Digestive</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="spine">
+              <span class="chip-name">Spine &amp; Back</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="pelvis">
+              <span class="chip-name">Pelvis &amp; Urinary</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="limbs">
+              <span class="chip-name">Limbs &amp; Joints</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="skin">
+              <span class="chip-name">Skin &amp; Rashes</span>
+            </button>
+          
+            <button type="button" class="region-chip " data-region="systemic">
+              <span class="chip-name">Whole Body &amp; Mind</span>
+            </button>
+          
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: CLINICAL ASSESSMENT WIZARD -->
+    <section id="view-assessment" class="page-view" style="display: none;">
+      <div id="wizardContainer">
+      <div class="wizard-container">
+        <!-- Progress Bar -->
+        <div class="wizard-progress-header">
+          <div class="progress-meta">
+            <span class="step-counter">STEP 01 OF 05</span>
+            <span class="step-title-crumb">Patient Profile &amp; Background</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 20%"></div>
+          </div>
+        </div>
+
+        <!-- Wizard Card -->
+        <div class="wizard-card-body">
+          
+      <div class="step-pane">
+        <h2 class="step-heading">Who is this clinical assessment for?</h2>
+        <p class="step-subheading">Age, biological sex, and background conditions significantly shape symptom likelihood and clinical risk triage.</p>
+
+        <div class="form-group-block">
+          <label class="group-label">Age Group</label>
+          <div class="toggle-pill-grid">
+            
+              <button type="button" class="toggle-pill " data-prop="ageGroup" data-val="infant">
+                Infant (&lt; 2 yrs)
+              </button>
+            
+              <button type="button" class="toggle-pill " data-prop="ageGroup" data-val="child">
+                Child (2–12 yrs)
+              </button>
+            
+              <button type="button" class="toggle-pill active" data-prop="ageGroup" data-val="adult">
+                Adult (13–64 yrs)
+              </button>
+            
+              <button type="button" class="toggle-pill " data-prop="ageGroup" data-val="senior">
+                Senior (65+ yrs)
+              </button>
+            
+          </div>
+        </div>
+
+        <div class="form-group-block">
+          <label class="group-label">Biological Sex</label>
+          <div class="toggle-pill-grid">
+            
+              <button type="button" class="toggle-pill " data-prop="biologicalSex" data-val="female">
+                Female
+              </button>
+            
+              <button type="button" class="toggle-pill " data-prop="biologicalSex" data-val="male">
+                Male
+              </button>
+            
+              <button type="button" class="toggle-pill active" data-prop="biologicalSex" data-val="not_specified">
+                Prefer not to say
+              </button>
+            
+          </div>
+        </div>
+
+        
+
+        <div class="form-group-block">
+          <label class="group-label">Pre-existing Health Conditions (Select all that apply)</label>
+          <div class="multi-select-chip-grid">
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="hypertension">
+                High Blood Pressure
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="diabetes">
+                Diabetes
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="asthma">
+                Asthma / COPD
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="heart_disease">
+                Heart Disease / Prior CAD
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="smoking">
+                Current Smoker / Vaper
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="immunosuppressed">
+                Immunosuppressed
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="obesity">
+                Obesity (BMI &gt; 30)
+              </button>
+            
+              <button type="button" class="comorbidity-chip " data-comorbidity="none">
+                No chronic conditions
+              </button>
+            
+          </div>
+        </div>
+      </div>
+    
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="wizard-nav-footer">
+          <button type="button" class="btn-wizard-cancel">Cancel &amp; Exit</button>
+          <button type="button" class="btn-wizard-next ">
+            Continue Next →
+          </button>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- VIEW 3: COMPREHENSIVE CONDITION LIBRARY -->
+    <section id="view-library" class="page-view" style="display: none;">
+      <div id="libraryContainer">
+      <div class="library-page-wrapper">
+        <!-- Library Hero Header -->
+        <div class="library-header-banner">
+          <div class="header-left">
+            <span class="lib-eyebrow">CLINICAL KNOWLEDGE REPOSITORY</span>
+            <h1 class="lib-main-title">Medical Conditions &amp; Pathology Compendium</h1>
+            <p class="lib-sub">Evidence-based dossiers covering etiology, clinical symptoms, diagnostic workups, and emergency thresholds across 12 organ systems.</p>
+          </div>
+
+          <div class="header-stats">
+            <div class="stat-pill">
+              <span class="stat-number">40</span>
+              <span class="stat-lbl">Documented Conditions</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-number">12</span>
+              <span class="stat-lbl">Organ Systems</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-number">0</span>
+              <span class="stat-lbl">Saved Bookmarks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Bar: Search, Category, Urgency, Saved -->
+        <div class="library-controls-card">
+          <!-- Search input -->
+          <div class="lib-search-box">
+            <span class="search-ico">🔍</span>
+            <input type="text" id="libSearchInput" class="lib-search-input" placeholder="Search conditions by name, symptom, clinical term, or ICD-10 (e.g. Asthma, Chest pain, Eczema, I10)..." value="">
+            
+          </div>
+
+          <!-- Category Horizontal Scroll -->
+          <div class="lib-categories-scroll">
+            
+              <button type="button" class="lib-cat-pill active" data-cat="All">
+                All
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Cardiovascular">
+                Cardiovascular
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Respiratory">
+                Respiratory
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Neurological">
+                Neurological
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Gastrointestinal">
+                Gastrointestinal
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Endocrine &amp; Metabolic">
+                Endocrine &amp; Metabolic
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Musculoskeletal">
+                Musculoskeletal
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Dermatology">
+                Dermatology
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Urology">
+                Urology
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Infectious">
+                Infectious
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="Mental Health">
+                Mental Health
+              </button>
+            
+              <button type="button" class="lib-cat-pill " data-cat="ENT &amp; Eye">
+                ENT &amp; Eye
+              </button>
+            
+          </div>
+
+          <!-- Secondary Filters Row -->
+          <div class="lib-filter-subrow">
+            <div class="filter-left-group">
+              <span class="subrow-lbl">Urgency:</span>
+              
+                <button type="button" class="urgency-filter-btn active" data-urgency="All">
+                  All Tiers
+                </button>
+              
+                <button type="button" class="urgency-filter-btn " data-urgency="routine">
+                  Routine
+                </button>
+              
+                <button type="button" class="urgency-filter-btn " data-urgency="urgent">
+                  Urgent
+                </button>
+              
+                <button type="button" class="urgency-filter-btn " data-urgency="emergency">
+                  Emergency
+                </button>
+              
+            </div>
+
+            <div class="filter-right-group">
+              <button type="button" id="toggleBookmarksBtn" class="btn-bookmark-filter ">
+                ☆ View Saved Bookmarks (0)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Counter & Comparison Bar -->
+        <div class="lib-results-bar">
+          <span>Showing <strong>40</strong> of 40 medical conditions</span>
+          
+        </div>
+
+        <!-- Disease Cards Grid -->
+        <div class="disease-cards-grid">
+          
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Cardiovascular</span>
+                    <span class="icd-tag">I10</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="hypertension" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Essential Hypertension</h3>
+                <div class="card-medical-term">Clinical term: <em>High Blood Pressure</em></div>
+                <p class="card-summary">Consistently elevated arterial blood pressure often called the 'silent killer' because it usually presents without noticeable symptoms until complications arise.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Often asymptomatic in early stages</li><li>Occasional morning headaches (occipital)</li><li>Mild dizziness or lightheadedness</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="hypertension">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="hypertension">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-emergency">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Cardiovascular</span>
+                    <span class="icd-tag">I25.1</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="coronary-artery-disease" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Coronary Artery Disease &amp; Angina</h3>
+                <div class="card-medical-term">Clinical term: <em>Ischemic Heart Disease</em></div>
+                <p class="card-summary">Narrowing or blockage of coronary arteries by atherosclerotic plaque, leading to reduced oxygen supply to heart muscle.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Substernal chest pressure, tightness, squeezing, or aching</li><li>Pain radiating to left shoulder, arm, jaw, neck, or back</li><li>Shortness of breath during mild exertion</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="coronary-artery-disease">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="coronary-artery-disease">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Cardiovascular</span>
+                    <span class="icd-tag">I50.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="heart-failure" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Congestive Heart Failure</h3>
+                <div class="card-medical-term">Clinical term: <em>Cardiomyopathy / Heart Failure</em></div>
+                <p class="card-summary">A progressive clinical syndrome where the heart is unable to pump sufficient blood to meet the metabolic needs of peripheral tissues.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Progressive shortness of breath on exertion or lying flat (orthopnea)</li><li>Bilateral swelling in feet, ankles, and lower legs (peripheral edema)</li><li>Waking up at night gasping for breath (paroxysmal nocturnal dyspnea)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="heart-failure">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="heart-failure">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Cardiovascular</span>
+                    <span class="icd-tag">I48.91</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="arrhythmia-atrial-fib" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Atrial Fibrillation &amp; Arrhythmias</h3>
+                <div class="card-medical-term">Clinical term: <em>Cardiac Dysrhythmia</em></div>
+                <p class="card-summary">An irregular and often very rapid cardiac rhythm that can lead to blood clots, stroke, and heart failure.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Palpitations (fluttering, flip-flopping, or racing heart sensation)</li><li>Irregular pulse with erratic beats</li><li>Fatigue and generalized weakness</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="arrhythmia-atrial-fib">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="arrhythmia-atrial-fib">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-emergency">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Cardiovascular</span>
+                    <span class="icd-tag">I82.40</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="deep-vein-thrombosis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Deep Vein Thrombosis (DVT)</h3>
+                <div class="card-medical-term">Clinical term: <em>Venous Thromboembolism</em></div>
+                <p class="card-summary">A blood clot that forms in a deep vein, usually in the lower extremity or pelvis, carrying a lethal risk of pulmonary embolism.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Unilateral swelling in one calf, thigh, or entire leg</li><li>Deep aching, cramping, or charley horse pain in the calf</li><li>Skin over the calf feels noticeably warmer to touch</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="deep-vein-thrombosis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="deep-vein-thrombosis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">J45.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="asthma" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Bronchial Asthma</h3>
+                <div class="card-medical-term">Clinical term: <em>Reactive Airway Disease</em></div>
+                <p class="card-summary">A chronic inflammatory disorder of the airways characterized by hyperresponsiveness, reversible airflow obstruction, and mucus hypersecretion.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>High-pitched expiratory wheezing</li><li>Episodes of breathlessness and air hunger</li><li>Chest tightness or feeling like an elastic band around ribs</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="asthma">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="asthma">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">J18.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="pneumonia" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Community-Acquired Pneumonia</h3>
+                <div class="card-medical-term">Clinical term: <em>Lower Respiratory Infection</em></div>
+                <p class="card-summary">An acute infection of the pulmonary parenchyma caused by bacteria, viruses, or fungi, causing the alveoli to fill with inflammatory exudate.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>High fever with shaking chills (rigors)</li><li>Productive cough with thick yellow, green, or rust-colored sputum</li><li>Pleuritic chest pain (sharp stab when inhaling deeply or coughing)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="pneumonia">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="pneumonia">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">J11.1</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="influenza" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Influenza (The Flu)</h3>
+                <div class="card-medical-term">Clinical term: <em>Acute Viral Influenza</em></div>
+                <p class="card-summary">A highly contagious viral infection of the respiratory tract caused by Influenza virus A or B, featuring abrupt systemic toxicity.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Abrupt onset of high fever (100.4°F to 104°F / 38°C to 40°C)</li><li>Intense generalized body aches and myalgias</li><li>Severe exhaustion, weakness, and bedbound fatigue</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="influenza">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="influenza">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">J20.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="acute-bronchitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Acute Bronchitis</h3>
+                <div class="card-medical-term">Clinical term: <em>Chest Cold / Tracheobronchitis</em></div>
+                <p class="card-summary">Self-limiting inflammation of the large bronchi, &gt;90% caused by common respiratory viruses rather than bacteria.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Persistent cough that lasts 10 to 21 days</li><li>Clear, white, yellow, or greenish sputum production</li><li>Substernal chest soreness from repetitive coughing</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="acute-bronchitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="acute-bronchitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">U07.1</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="covid-19" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">COVID-19 (SARS-CoV-2)</h3>
+                <div class="card-medical-term">Clinical term: <em>Coronavirus Disease 2019</em></div>
+                <p class="card-summary">A systemic infection caused by the novel coronavirus SARS-CoV-2, affecting the upper/lower respiratory tract, vascular endothelium, and immune response.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Fever, chills, and rigors</li><li>Dry or productive cough</li><li>Sudden partial or total loss of taste or smell (Ageusia / Anosmia)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="covid-19">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="covid-19">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Respiratory</span>
+                    <span class="icd-tag">J44.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="copd" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Chronic Obstructive Pulmonary Disease (COPD)</h3>
+                <div class="card-medical-term">Clinical term: <em>Emphysema &amp; Chronic Bronchitis</em></div>
+                <p class="card-summary">A progressive, life-threatening lung disease causing long-term breathing difficulty and persistent airflow limitation.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Chronic and progressive shortness of breath, initially on exertion</li><li>Daily chronic cough producing mucus/phlegm</li><li>Frequent respiratory infections in winter months</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="copd">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="copd">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-emergency">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Neurological</span>
+                    <span class="icd-tag">I63.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="stroke-tia" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Stroke &amp; Transient Ischemic Attack (TIA)</h3>
+                <div class="card-medical-term">Clinical term: <em>Cerebrovascular Accident</em></div>
+                <p class="card-summary">A medical emergency caused by disrupted blood flow to the brain, either by arterial occlusion (ischemic) or vessel rupture (hemorrhagic).</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>F.A.S.T. signs: Facial drooping on one side</li><li>Arm weakness or numbness (inability to raise both arms)</li><li>Speech difficulty (slurred words or inability to speak/comprehend)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="stroke-tia">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="stroke-tia">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Neurological</span>
+                    <span class="icd-tag">G43.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="migraine" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Migraine Headache</h3>
+                <div class="card-medical-term">Clinical term: <em>Neurovascular Cephalea</em></div>
+                <p class="card-summary">A complex neurological condition featuring moderate-to-severe throbbing headache attacks, sensory hypersensitivity, and autonomic dysfunction.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Unilateral (one-sided) pulsating, throbbing head pain</li><li>Photophobia (extreme sensitivity to light) and phonophobia (sensitivity to sound)</li><li>Nausea and vomiting during peak pain</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="migraine">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="migraine">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Neurological</span>
+                    <span class="icd-tag">G44.2</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="tension-headache" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Tension-Type Headache</h3>
+                <div class="card-medical-term">Clinical term: <em>Tension Cephalea</em></div>
+                <p class="card-summary">The most common primary headache disorder, presenting as a non-pulsatile, dull band of pressure around the forehead and temples.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Dull, aching, non-throbbing bilateral pressure or tightness ('vise-like band')</li><li>Discomfort extending from forehead to occiput and cervical spine</li><li>Tenderness in scalp, neck, and shoulder trapezius muscles</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="tension-headache">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="tension-headache">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Neurological</span>
+                    <span class="icd-tag">G51.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="bells-palsy" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Bell's Palsy</h3>
+                <div class="card-medical-term">Clinical term: <em>Idiopathic Facial Nerve Paralysis</em></div>
+                <p class="card-summary">Sudden, temporary weakness or paralysis of facial muscles on one side, resulting from acute dysfunction of Cranial Nerve VII (Facial Nerve).</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Rapid onset (over 24-72 hours) of total or partial paralysis on ONE side of the face</li><li>Inability to close the eye on the affected side or blink</li><li>Drooping mouth corner, drooling, and difficulty smiling or chewing</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="bells-palsy">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="bells-palsy">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Gastrointestinal</span>
+                    <span class="icd-tag">K21.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="gerd-acid-reflux" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Gastroesophageal Reflux Disease (GERD)</h3>
+                <div class="card-medical-term">Clinical term: <em>Acid Reflux / Reflux Esophagitis</em></div>
+                <p class="card-summary">A chronic digestive disease that occurs when stomach acid or bile flows back into the food pipe (esophagus), irritating the lining.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Pyrosis: burning chest pain (heartburn) behind breastbone, usually after meals</li><li>Acid regurgitation of sour or bitter fluid into mouth or throat</li><li>Worsening symptoms when lying flat, reclining, or bending over</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="gerd-acid-reflux">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="gerd-acid-reflux">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-emergency">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Gastrointestinal</span>
+                    <span class="icd-tag">K35.80</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="appendicitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Acute Appendicitis</h3>
+                <div class="card-medical-term">Clinical term: <em>Inflammation of Vermiform Appendix</em></div>
+                <p class="card-summary">An acute, rapidly progressive inflammation and bacterial infection of the appendix that requires emergency surgical removal to prevent rupture.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Pain starting vaguely around the navel (periumbilical) then migrating to the LOWER RIGHT abdomen (McBurney's point)</li><li>Sharp, localized pain that intensifies rapidly over 12 to 24 hours</li><li>Pain dramatically worse with walking, jumping, coughing, or bumps during driving</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="appendicitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="appendicitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Gastrointestinal</span>
+                    <span class="icd-tag">K27.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="peptic-ulcer-disease" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Peptic Ulcer Disease (PUD)</h3>
+                <div class="card-medical-term">Clinical term: <em>Gastric &amp; Duodenal Ulceration</em></div>
+                <p class="card-summary">Open sores that develop on the inside mucosal lining of the stomach (gastric) or the upper portion of the small intestine (duodenal).</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Burning epigastric stomach pain between the breastbone and belly button</li><li>Pain often worse when the stomach is empty (duodenal ulcers improve with food, gastric worsen)</li><li>Pain that awakens patient during the middle of the night</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="peptic-ulcer-disease">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="peptic-ulcer-disease">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Gastrointestinal</span>
+                    <span class="icd-tag">K58.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="irritable-bowel-syndrome" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Irritable Bowel Syndrome (IBS)</h3>
+                <div class="card-medical-term">Clinical term: <em>Functional Gastrointestinal Disorder</em></div>
+                <p class="card-summary">A common disorder of brain-gut interaction characterized by recurrent abdominal pain linked to changes in bowel frequency or stool form.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Recurrent abdominal cramping or pain related to defecation</li><li>Altered stool frequency (diarrhea in IBS-D, constipation in IBS-C, or mixed in IBS-M)</li><li>Changes in stool appearance (lumpy/hard or loose/watery)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="irritable-bowel-syndrome">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="irritable-bowel-syndrome">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Gastrointestinal</span>
+                    <span class="icd-tag">K80.00</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="gallstones-cholecystitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Gallstones &amp; Acute Cholecystitis</h3>
+                <div class="card-medical-term">Clinical term: <em>Biliary Colic &amp; Cholecystitis</em></div>
+                <p class="card-summary">Hardened deposits of digestive fluid (cholesterol or bilirubin) in the gallbladder that can block the cystic duct, causing severe pain and inflammation.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Severe, steady, gripping pain in the RIGHT UPPER quadrant of the abdomen</li><li>Pain radiating to the right shoulder blade or interscapular back</li><li>Pain triggered 30 to 60 minutes after eating a fatty or greasy meal</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="gallstones-cholecystitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="gallstones-cholecystitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Endocrine &amp; Metabolic</span>
+                    <span class="icd-tag">E11.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="type-2-diabetes" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Type 2 Diabetes Mellitus</h3>
+                <div class="card-medical-term">Clinical term: <em>Non-Insulin Dependent Diabetes</em></div>
+                <p class="card-summary">A chronic metabolic disorder characterized by persistent hyperglycemia resulting from insulin resistance combined with relative insulin secretory deficiency.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Polydipsia: unquenchable thirst despite drinking water</li><li>Polyuria: frequent urination, especially waking multiple times at night (nocturia)</li><li>Polyphagia: persistent hunger even after eating</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="type-2-diabetes">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="type-2-diabetes">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Endocrine &amp; Metabolic</span>
+                    <span class="icd-tag">E03.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="hypothyroidism" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Hypothyroidism (Underactive Thyroid)</h3>
+                <div class="card-medical-term">Clinical term: <em>Hashimoto's Thyroiditis / Thyroid Failure</em></div>
+                <p class="card-summary">A clinical state where the thyroid gland does not produce sufficient thyroid hormones (T3 and T4), slowing down the body's entire metabolic rate.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Persistent, debilitating fatigue and extreme sluggishness</li><li>Cold intolerance (feeling freezing when others are comfortable)</li><li>Unexplained modest weight gain (5-10 lbs, mostly fluid and salt)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="hypothyroidism">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="hypothyroidism">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Endocrine &amp; Metabolic</span>
+                    <span class="icd-tag">E05.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="hyperthyroidism" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Hyperthyroidism &amp; Graves' Disease</h3>
+                <div class="card-medical-term">Clinical term: <em>Thyrotoxicosis</em></div>
+                <p class="card-summary">An overactive thyroid gland that produces and secretes excessive amounts of thyroid hormones, placing the body into a hypermetabolic state.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Rapid heart rate (resting tachycardia &gt; 100 bpm) or palpitations</li><li>Unintentional weight loss despite normal or increased appetite</li><li>Heat intolerance and excessive perspiration</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="hyperthyroidism">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="hyperthyroidism">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Musculoskeletal</span>
+                    <span class="icd-tag">M19.90</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="osteoarthritis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Osteoarthritis</h3>
+                <div class="card-medical-term">Clinical term: <em>Degenerative Joint Disease</em></div>
+                <p class="card-summary">The most common form of arthritis, involving progressive biomechanical breakdown of articular cartilage, subchondral bone remodeling, and secondary synovitis.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Deep, aching joint pain that worsens after joint use and improves with rest</li><li>Morning joint stiffness lasting LESS than 30 minutes</li><li>Joint crepitus (grating, crunching, or cracking sensation on movement)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="osteoarthritis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="osteoarthritis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Musculoskeletal</span>
+                    <span class="icd-tag">M54.30</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="lumbar-sciatica" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Lumbar Radiculopathy (Sciatica)</h3>
+                <div class="card-medical-term">Clinical term: <em>Sciatic Nerve Compression</em></div>
+                <p class="card-summary">Pain radiating along the path of the sciatic nerve, typically branching from the lower back through the hip and buttock down one leg.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Sharp, burning, or electric-shock pain radiating down the buttock, posterior thigh, and calf</li><li>Pain typically felt in ONE leg (unilateral)</li><li>Pain aggravated by prolonged sitting, coughing, sneezing, or straining</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="lumbar-sciatica">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="lumbar-sciatica">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Musculoskeletal</span>
+                    <span class="icd-tag">M10.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="gout-arthritis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Gout &amp; Hyperuricemia</h3>
+                <div class="card-medical-term">Clinical term: <em>Crystal-Induced Arthropathy</em></div>
+                <p class="card-summary">A painful form of inflammatory arthritis caused by the deposition of monosodium urate monohydrate crystals in synovial fluid and joint tissues.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Sudden, excruciating, explosive joint pain that awakens the patient in the middle of the night</li><li>Podagra: predominantly affects the first metatarsophalangeal (MTP) joint of the BIG TOE (&gt; 50% of first flares)</li><li>Affected joint is intensely swollen, shiny red or purplish, and hot to touch</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="gout-arthritis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="gout-arthritis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Musculoskeletal</span>
+                    <span class="icd-tag">M79.7</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="fibromyalgia" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Fibromyalgia</h3>
+                <div class="card-medical-term">Clinical term: <em>Central Sensitivity Syndrome</em></div>
+                <p class="card-summary">A chronic non-articular disorder characterized by widespread musculoskeletal pain, central pain amplification, debilitating fatigue, and sleep disturbances.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Widespread body pain present for at least 3 months, affecting both sides of the body, above and below the waist</li><li>Unrefreshing sleep: waking up feeling exhausted even after 8-10 hours in bed</li><li>Profound, relentless physical and mental fatigue</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="fibromyalgia">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="fibromyalgia">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Dermatology</span>
+                    <span class="icd-tag">L20.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="eczema-atopic-dermatitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Atopic Dermatitis (Eczema)</h3>
+                <div class="card-medical-term">Clinical term: <em>Atopic Eczema</em></div>
+                <p class="card-summary">A chronic, relapsing, pruritic inflammatory skin disease characterized by epidermal barrier dysfunction and immune hyperreactivity.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Intense, persistent pruritus (itching) - often described as 'an itch that rashes'</li><li>Dry, erythematous (red), scaly patches of skin</li><li>Classic distribution in flexural creases (antecubital elbow creases, popliteal back-of-knee folds, neck, wrists)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="eczema-atopic-dermatitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="eczema-atopic-dermatitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Dermatology</span>
+                    <span class="icd-tag">L40.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="psoriasis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Plaque Psoriasis</h3>
+                <div class="card-medical-term">Clinical term: <em>Psoriasis Vulgaris</em></div>
+                <p class="card-summary">A chronic systemic immune-mediated inflammatory skin condition characterized by sharply demarcated erythematous plaques covered with silvery micaceous scales.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Well-demarcated raised red plaques covered with coarse, flaky, silvery-white scales</li><li>Classic extensor surface distribution: outer elbows, front of knees, scalp, and lumbosacral back</li><li>Auspitz sign: pinpoint droplet bleeding when scales are gently lifted or scraped off</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="psoriasis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="psoriasis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Dermatology</span>
+                    <span class="icd-tag">B02.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="shingles-herpes-zoster" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Shingles (Herpes Zoster)</h3>
+                <div class="card-medical-term">Clinical term: <em>Varicella-Zoster Virus Reactivation</em></div>
+                <p class="card-summary">A painful, blistering viral skin eruption caused by the reactivation of dormant varicella-zoster virus (VZV) in cranial or dorsal root sensory ganglia.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Prodrome: burning, tingling, stinging, or hyperesthesia in a localized skin band 2-4 days BEFORE any rash appears</li><li>Unilateral eruption of clustered erythematous papules that rapidly evolve into clear fluid-filled vesicles</li><li>Strict dermatomal distribution: stops sharply at the anatomical midline of the body (e.g. half-belt around torso)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="shingles-herpes-zoster">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="shingles-herpes-zoster">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Dermatology</span>
+                    <span class="icd-tag">L03.90</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="cellulitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Cellulitis</h3>
+                <div class="card-medical-term">Clinical term: <em>Acute Bacterial Dermis &amp; Subcutaneous Infection</em></div>
+                <p class="card-summary">An acute, spreading bacterial infection of the deep dermis and subcutaneous tissue, most commonly affecting the lower legs.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Rapidly spreading area of warm, bright red, swollen skin with ill-defined borders</li><li>Skin feels hot and exquisitely tender to light pressure</li><li>Noticeable swelling and stretched, tight appearance of the affected limb</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="cellulitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="cellulitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Urology</span>
+                    <span class="icd-tag">N39.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="urinary-tract-infection" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Urinary Tract Infection (UTI / Cystitis)</h3>
+                <div class="card-medical-term">Clinical term: <em>Acute Bacterial Cystitis</em></div>
+                <p class="card-summary">An infection in any part of the urinary system, most frequently the lower urinary tract (bladder and urethra) caused by ascending bacteria.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Dysuria: sharp, burning or stinging sensation while urinating</li><li>Urinary urgency: sudden, compelling urge to void that cannot be postponed</li><li>Urinary frequency: passing frequent, abnormally small volumes of urine</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="urinary-tract-infection">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="urinary-tract-infection">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-emergency">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Urology</span>
+                    <span class="icd-tag">N20.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="kidney-stones" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Kidney Stones (Nephrolithiasis)</h3>
+                <div class="card-medical-term">Clinical term: <em>Renal Calculi &amp; Ureteral Colic</em></div>
+                <p class="card-summary">Hard mineral and salt deposits that form inside the renal calyces and cause excruciating pain when passing through the narrow ureter.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Severe, agonizing, colicky pain in the flank and back, directly below the ribs</li><li>Pain waves that radiate toward the lower abdomen, groin, and testicle/labia</li><li>Inability to find a comfortable position (patients pace, writhe, or constantly shift posture)</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="kidney-stones">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="kidney-stones">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Infectious</span>
+                    <span class="icd-tag">J02.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="strep-throat" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Streptococcal Pharyngitis (Strep Throat)</h3>
+                <div class="card-medical-term">Clinical term: <em>Group A Streptococcal Tonsillopharyngitis</em></div>
+                <p class="card-summary">A bacterial infection of the throat and tonsils caused by Streptococcus pyogenes (Group A Strep) requiring antibiotics to prevent acute rheumatic fever.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Sudden, severe sore throat that causes agonizing pain when swallowing (odynophagia)</li><li>Fever typically &gt;= 101°F (38.3°C)</li><li>Swollen, brightly red tonsils often coated with white or yellow patches of exudate</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="strep-throat">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="strep-throat">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Mental Health</span>
+                    <span class="icd-tag">F41.1</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="generalized-anxiety-disorder" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Generalized Anxiety Disorder (GAD)</h3>
+                <div class="card-medical-term">Clinical term: <em>Chronic Anxiety Neurosis</em></div>
+                <p class="card-summary">Persistent, excessive, and unrealistic worry about everyday life events, work, health, and finances that is difficult to control.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Excessive, uncontrollable anxiety and worry occurring more days than not for at least 6 months</li><li>Restlessness or feeling keyed up, on edge, or unable to relax</li><li>Muscle tension, particularly in the neck, shoulders, and upper back</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="generalized-anxiety-disorder">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="generalized-anxiety-disorder">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Mental Health</span>
+                    <span class="icd-tag">F32.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="major-depressive-disorder" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Major Depressive Disorder (Depression)</h3>
+                <div class="card-medical-term">Clinical term: <em>Clinical Unipolar Depression</em></div>
+                <p class="card-summary">A common and serious mood disorder that negatively affects how you feel, think, and handle daily activities, lasting at least two consecutive weeks.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Persistent feeling of sadness, emptiness, hopelessness, or tearfulness</li><li>Anhedonia: markedly diminished interest or pleasure in almost all activities previously enjoyed</li><li>Significant unintentional weight loss/gain or marked changes in appetite</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="major-depressive-disorder">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="major-depressive-disorder">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">Mental Health</span>
+                    <span class="icd-tag">F41.0</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="panic-disorder" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Panic Disorder &amp; Panic Attacks</h3>
+                <div class="card-medical-term">Clinical term: <em>Episodic Paroxysmal Anxiety</em></div>
+                <p class="card-summary">An anxiety disorder characterized by recurrent, unexpected panic attacks and persistent worry about experiencing subsequent attacks.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Sudden surge of intense fear or intense discomfort that peaks within minutes</li><li>Palpitations, pounding heart, or accelerated heart rate</li><li>Sweating, trembling, or shaking</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="panic-disorder">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="panic-disorder">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">ENT &amp; Eye</span>
+                    <span class="icd-tag">J30.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="allergic-rhinitis" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Allergic Rhinitis (Hay Fever)</h3>
+                <div class="card-medical-term">Clinical term: <em>Seasonal &amp; Perennial Allergies</em></div>
+                <p class="card-summary">An IgE-mediated inflammatory condition of the nasal mucosa induced by airborne environmental allergen exposure.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Paroxysms of repetitive sneezing (often 5-10 times in a row)</li><li>Clear, watery rhinorrhea (runny nose) and nasal congestion</li><li>Intense itching of the nose, roof of the mouth, throat, and ears</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="allergic-rhinitis">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="allergic-rhinitis">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-urgent">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">ENT &amp; Eye</span>
+                    <span class="icd-tag">H66.90</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="otitis-media" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Acute Otitis Media (Middle Ear Infection)</h3>
+                <div class="card-medical-term">Clinical term: <em>Tympanic Membrane Infection</em></div>
+                <p class="card-summary">An acute infection of the middle ear space behind the eardrum, characterized by rapid onset of pain and middle ear effusion.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Otalgia: sharp, throbbing, or deep aching ear pain</li><li>Temporary conductive hearing loss or muffled sound perception in affected ear</li><li>Feeling of fullness, pressure, or popping in the ear</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="otitis-media">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="otitis-media">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+              <div class="disease-card urgency-border-routine">
+                <div class="card-top-meta">
+                  <div class="category-tag-row">
+                    <span class="organ-tag">ENT &amp; Eye</span>
+                    <span class="icd-tag">H10.9</span>
+                  </div>
+                  <button type="button" class="bookmark-icon-btn " data-bookmark-id="conjunctivitis-pink-eye" title="Save Condition">
+                    ☆
+                  </button>
+                </div>
+
+                <h3 class="card-disease-title">Conjunctivitis (Pink Eye)</h3>
+                <div class="card-medical-term">Clinical term: <em>Inflammation of the Conjunctiva</em></div>
+                <p class="card-summary">Inflammation or infection of the transparent membrane (conjunctiva) that lines the eyelid and covers the white part of the eyeball.</p>
+
+                <div class="card-hallmarks-block">
+                  <span class="hallmark-lbl">Hallmark Symptoms:</span>
+                  <ul class="hallmark-list">
+                    <li>Redness or pink discoloration in the sclera (white part of one or both eyes)</li><li>Discharge: watery clear discharge (viral/allergic) or thick yellow/green pus (bacterial)</li><li>Crusting of eyelids or eyelashes overnight, making it difficult to open eyes in the morning</li>
+                  </ul>
+                </div>
+
+                <div class="card-footer-action-row">
+                  <button type="button" class="btn-open-dossier" data-open-dossier="conjunctivitis-pink-eye">
+                    View Full Dossier →
+                  </button>
+
+                  <label class="compare-checkbox-label">
+                    <input type="checkbox" class="chk-compare-item" data-compare-id="conjunctivitis-pink-eye">
+                    <span>Compare</span>
+                  </label>
+                </div>
+              </div>
+            
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- VIEW 4: DIFFERENTIAL COMPARISON MATRIX -->
+    <section id="view-compare" class="page-view" style="display: none;">
+      <div id="compareContainer">
+      <div class="comparison-page-wrapper">
+        <div class="comparison-header">
+          <button type="button" id="btnBackToLibraryFromCompare" class="btn-text-back">
+            ← Back to Condition Library
+          </button>
+          <span class="comp-eyebrow">CLINICAL DIFFERENTIAL MATRIX</span>
+          <h1 class="comp-title">Side-by-Side Condition Comparison</h1>
+          <p class="comp-sub">Compare hallmark distinctions, emergency thresholds, diagnostic workups, and home supportive measures.</p>
+        </div>
+
+        <!-- Quick Comparison Presets -->
+        <div class="comparison-presets-bar">
+          <span class="preset-label">Common Presets:</span>
+          <button type="button" class="btn-preset-compare" data-preset="cold-flu-covid">
+            Influenza vs COVID-19
+          </button>
+          <button type="button" class="btn-preset-compare" data-preset="headaches">
+            Tension Headache vs Migraine
+          </button>
+          <button type="button" class="btn-preset-compare" data-preset="chest">
+            Acid Reflux (GERD) vs Coronary Artery Disease
+          </button>
+          <button type="button" class="btn-preset-compare" data-preset="joints">
+            Osteoarthritis vs Gout Flare
+          </button>
+        </div>
+
+        
+          <!-- Comparison Table Matrix -->
+          <div class="comparison-table-scroll">
+            <table class="comparison-matrix-table">
+              <thead>
+                <tr>
+                  <th class="feature-col">Clinical Attribute</th>
+                  
+                    <th class="condition-col">
+                      <div class="col-header-box">
+                        <span class="cat-pill">Neurological</span>
+                        <h3 class="col-title">Tension-Type Headache</h3>
+                        <span class="col-term">Tension Cephalea (G44.2)</span>
+                        <span class="urgency-tag urgency-routine">Self-Care &amp; Primary Care</span>
+                      </div>
+                    </th>
+                  
+                    <th class="condition-col">
+                      <div class="col-header-box">
+                        <span class="cat-pill">Neurological</span>
+                        <h3 class="col-title">Migraine Headache</h3>
+                        <span class="col-term">Neurovascular Cephalea (G43.9)</span>
+                        <span class="urgency-tag urgency-routine">Primary Care / Neurologist</span>
+                      </div>
+                    </th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-cell">Summary &amp; Nature</td>
+                  <td class="data-cell">The most common primary headache disorder, presenting as a non-pulsatile, dull band of pressure around the forehead and temples.</td><td class="data-cell">A complex neurological condition featuring moderate-to-severe throbbing headache attacks, sensory hypersensitivity, and autonomic dysfunction.</td>
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Underlying Pathology</td>
+                  <td class="data-cell pathology-cell">Myofascial nociceptor sensitization in pericranial muscles, neck strain, and altered central pain processing without autonomic features.</td><td class="data-cell pathology-cell">Cortical spreading depression and activation of the trigeminovascular system release calcitonin gene-related peptide (CGRP) and induce neurogenic inflammation.</td>
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Hallmark Symptoms</td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li><strong>Dull, aching, non-throbbing bilateral pressure or tightness ('vise-like band')</strong></li><li><strong>Discomfort extending from forehead to occiput and cervical spine</strong></li><li><strong>Tenderness in scalp, neck, and shoulder trapezius muscles</strong></li><li><strong>Mild to moderate intensity that does not worsen with routine walking or stairs</strong></li><li><strong>Absence of nausea or vomiting</strong></li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li><strong>Unilateral (one-sided) pulsating, throbbing head pain</strong></li><li><strong>Photophobia (extreme sensitivity to light) and phonophobia (sensitivity to sound)</strong></li><li><strong>Nausea and vomiting during peak pain</strong></li><li><strong>Moderate to severe pain worsened by routine physical movement or bending</strong></li><li><strong>Attacks typically lasting 4 to 72 hours if untreated</strong></li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Subtle / Atypical Signs</td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>Difficulty concentrating due to persistent dull pressure</li><li>Mild light or sound sensitivity (never both simultaneously)</li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>Visual aura: shimmering zigzag lights (fortification spectra), blind spots (scotoma) 20-60 min before headache</li><li>Sensory aura: numbness or tingling moving slowly across fingers or lips</li><li>Prodrome symptoms: excessive yawning, neck stiffness, food cravings 24h prior</li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Emergency Red Flags</td>
+                  
+                    <td class="data-cell red-flag-cell">
+                      <ul class="matrix-bullet-list rf-list">
+                        <li>⚠️ Headache suddenly changes in quality, becoming sharp, unilateral, or throbbing</li><li>⚠️ Accompanied by focal neurological symptoms (vision loss, weakness, speech slurring)</li><li>⚠️ Awakens the patient from sleep in the middle of the night</li><li>⚠️ Accompanied by unexplained weight loss, scalp tenderness on combing, or jaw claudication in older adults (Temporal Arteritis)</li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell red-flag-cell">
+                      <ul class="matrix-bullet-list rf-list">
+                        <li>⚠️ Headache reaching maximum explosive intensity within 60 seconds ('Thunderclap')</li><li>⚠️ Headache accompanied by fever, stiff neck, and confusion (Meningitis sign)</li><li>⚠️ Headache following head trauma or with new onset weakness/numbness</li><li>⚠️ Progressive worsening daily headache in someone over age 50</li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Standard Diagnostic Workup</td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>🩺 Clinical evaluation and physical palpation of pericranial muscles</li><li>🩺 Rule out cervical spine pathology and refractory vision refraction errors</li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>🩺 Clinical diagnosis based on International Headache Society (ICHD-3) criteria</li><li>🩺 Brain MRI or CT only if red flags are present (abnormal neurological exam, onset after age 50, systemic symptoms)</li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Evidence-based Supportive Steps</td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>💡 Take ergonomic breaks every 30 minutes during desk work</li><li>💡 Gentle neck and shoulder stretching and warm moist heat packs</li><li>💡 Maintain consistent sleep and meal schedules</li><li>💡 Judicious use of over-the-counter NSAIDs (Ibuprofen, Naproxen) no more than 2 days per week</li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>💡 Rest in a dark, quiet, cool room at the earliest sign of an attack</li><li>💡 Apply cold compresses or ice packs to the forehead or base of skull</li><li>💡 Stay hydrated and avoid known dietary triggers (aged cheeses, nitrates, alcohol)</li><li>💡 Take abortive prescription triptans (Sumatriptan) or Gepants as soon as pain begins</li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+                  <td class="feature-cell">Questions for the Doctor</td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>❓ Could my headaches be linked to teeth clenching (TMJ) or cervical neck posture?</li><li>❓ How can I avoid medication overuse (rebound) headaches?</li><li>❓ Would physical therapy or stress management techniques help?</li>
+                      </ul>
+                    </td>
+                  
+                    <td class="data-cell">
+                      <ul class="matrix-bullet-list">
+                        <li>❓ Am I taking acute pain relievers too often (&gt; 10 days/month), risking medication overuse headache?</li><li>❓ Am I a candidate for daily preventive therapy (CGRP antagonists, beta-blockers, Topiramate)?</li><li>❓ Should I keep a migraine headache trigger diary?</li>
+                      </ul>
+                    </td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        
+      </div>
+    </div>
+    </section>
+
+    <!-- VIEW 5: EMERGENCY HOTLINE DIRECTORY -->
+    <section id="view-emergency" class="page-view" style="display: none;">
+      <div id="emergencyDirectoryContainer">
+      <div class="emergency-page-wrapper">
+        <div class="emergency-hero-banner">
+          <span class="emergency-badge-pulse">🚨 EMERGENCY DIRECTORY</span>
+          <h1 class="em-title">Global Crisis Lines &amp; Emergency Protocols</h1>
+          <p class="em-sub">If you or someone nearby is experiencing acute, life-threatening symptoms, do not hesitate. Contact emergency medical services immediately.</p>
+        </div>
+
+        <!-- Hotlines Grid -->
+        <div class="emergency-grid">
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">US/CA</div>
+              <h3 class="country-name">United States &amp; Canada</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:911" class="num-link highlight-red">📞 911</a>
+                </div>
+                
+                  <div class="num-row">
+                    <span class="num-label">Mental Health Crisis / Suicide Lifeline:</span>
+                    <a href="tel:988" class="num-link">🧠 988 (Call or Text)</a>
+                  </div>
+                
+                
+                  <div class="num-row">
+                    <span class="num-label">Poison Control:</span>
+                    <span class="num-text">🧪 1-800-222-1222</span>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">UK</div>
+              <h3 class="country-name">United Kingdom</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:999" class="num-link highlight-red">📞 999 / 112</a>
+                </div>
+                
+                  <div class="num-row">
+                    <span class="num-label">Mental Health Crisis / Suicide Lifeline:</span>
+                    <a href="tel:111" class="num-link">🧠 111 (Mental Health Option)</a>
+                  </div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">EU</div>
+              <h3 class="country-name">European Union</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:112" class="num-link highlight-red">📞 112</a>
+                </div>
+                
+                  <div class="num-row">
+                    <span class="num-label">Mental Health Crisis / Suicide Lifeline:</span>
+                    <a href="tel:Varies" class="num-link">🧠 Varies by state (116 123)</a>
+                  </div>
+                
+                
+                  <div class="num-row">
+                    <span class="num-label">Poison Control:</span>
+                    <span class="num-text">🧪 Local European Poison Centres</span>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">IN</div>
+              <h3 class="country-name">India</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:112" class="num-link highlight-red">📞 112 / 102</a>
+                </div>
+                
+                  <div class="num-row">
+                    <span class="num-label">Mental Health Crisis / Suicide Lifeline:</span>
+                    <a href="tel:Tele-MANAS:" class="num-link">🧠 Tele-MANAS: 14416 / 1800 891 4416</a>
+                  </div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">AU</div>
+              <h3 class="country-name">Australia</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:000" class="num-link highlight-red">📞 000</a>
+                </div>
+                
+                  <div class="num-row">
+                    <span class="num-label">Mental Health Crisis / Suicide Lifeline:</span>
+                    <a href="tel:13" class="num-link">🧠 13 11 14 (Lifeline)</a>
+                  </div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="country-hotline-card">
+              <div class="country-code-pill">INTL</div>
+              <h3 class="country-name">International / Roaming</h3>
+              <div class="hotline-numbers">
+                <div class="num-row">
+                  <span class="num-label">Primary Emergency (Ambulance/Police/Fire):</span>
+                  <a href="tel:112" class="num-link highlight-red">📞 112 (Universal GSM standard)</a>
+                </div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+
+        <!-- Action Protocols -->
+        <div class="emergency-protocols-section">
+          <h2>Critical Emergency Action Protocols</h2>
+          <div class="protocol-cards-grid">
+            
+              <div class="protocol-card">
+                <h4 class="protocol-title">⚠️ Suspected Heart Attack</h4>
+                <p class="protocol-desc">Call emergency services immediately. Sit down in a comfortable position with back supported. If not allergic and advised by emergency dispatch, chew one adult 325mg aspirin. Do NOT drive yourself to the hospital.</p>
+              </div>
+            
+              <div class="protocol-card">
+                <h4 class="protocol-title">⚠️ Suspected Stroke (F.A.S.T.)</h4>
+                <p class="protocol-desc">Face drooping, Arm weakness, Speech difficulty, Time to call 911 immediately. Note the exact time symptoms started. Do NOT give aspirin, food, or drink.</p>
+              </div>
+            
+              <div class="protocol-card">
+                <h4 class="protocol-title">⚠️ Severe Anaphylaxis / Allergic Reaction</h4>
+                <p class="protocol-desc">Administer an Epinephrine auto-injector (EpiPen) into the outer thigh immediately. Call emergency dispatch right away. Lie flat with legs elevated unless vomiting or struggling to breathe.</p>
+              </div>
+            
+              <div class="protocol-card">
+                <h4 class="protocol-title">⚠️ Acute Mental Health Crisis</h4>
+                <p class="protocol-desc">Call or text 988 (US/Canada) or your national crisis lifeline. Do not stay alone. Remove any immediate means of self-harm and connect with a trusted support person.</p>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  </main>
+
+  <!-- Dossier Modal Container -->
+  <div id="modalContainer"></div>
+
+  <!-- Professional Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>CarePath Pro</h4>
+          <p>An evidence-based clinical assessment engine and comprehensive pathology compendium built for patients, clinicians, and health educators.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Assessment &amp; Tools</h5>
+          <ul>
+            <li><a href="http://localhost:8080/#" data-nav="assessment" class="">Symptom Checker</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="home" class="active">Interactive Body Map</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="compare" class="">Differential Matrix</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="emergency" class="">Emergency Hotlines</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Organ Systems</h5>
+          <ul>
+            <li><a href="http://localhost:8080/#" data-nav="library" class="">Cardiovascular</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="library" class="">Respiratory</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="library" class="">Gastrointestinal</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="library" class="">Neurological &amp; Brain</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Safety &amp; Crisis</h5>
+          <ul>
+            <li><a href="tel:911">Emergency: 911 / 112</a></li>
+            <li><a href="tel:988">Suicide &amp; Crisis: 988</a></li>
+            <li><a href="http://localhost:8080/#" data-nav="emergency" class="">Action Protocols</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <strong>MEDICAL DISCLAIMER &amp; CLINICAL NOTICE:</strong> CarePath Pro is designed for educational triage and healthcare visit preparation only. It does not provide medical diagnosis, treatment plans, or prescriptions. If you are experiencing crushing chest pain, sudden numbness or weakness on one side of your face or body, severe shortness of breath, or thoughts of self-harm, please contact emergency medical services (911, 112, or local dispatch) immediately.
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>© 2026 CarePath Pro. Built with rigorous clinical evidence standards.</span>
+        <span>Version 2.0 Pro Edition · ICD-10 Compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Bootstrap Script -->
+  <script type="module" src="./CarePath Pro · Clinical Symptom Assessment Engine &amp; Medical Knowledge Library_files/app.js.download"></script>
+
+
+</body></html>
